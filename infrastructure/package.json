@@ -1,0 +1,37 @@
+{
+  "name": "template-infra-cdk-typescript",
+  "version": "0.1.0",
+  "bin": {
+    "tmp": "bin/app.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest --passWithNoTests",
+    "cdk": "cdk",
+    "synth": "cdk synth --version-reporting false",
+    "lint": "eslint --ext .ts ./",
+    "lint-and-fix": "eslint --ext .ts --fix ./",
+    "pre-commit": "npm run lint"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/node": "16.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "ts-node": "^10.2.0",
+    "typescript": "~4.3.5"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.14.0",
+    "cdk": "2.14.0",
+    "constructs": "10.0.5",
+    "@upstart/aws-cdk-library": "2.14.1",
+    "@upstart/infra-github-cicd": "3.1.2"
+  }
+}
